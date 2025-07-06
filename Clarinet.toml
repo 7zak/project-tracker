@@ -1,0 +1,25 @@
+[project]
+name = "product-tracker"
+description = "A Clarity smart contract for tracking products through their lifecycle"
+authors = ["Abdulrazak malik <hexchange001@gmail.com>"]
+telemetry = false
+cache_dir = "./.cache"
+requirements = []
+
+[contracts.product-tracker]
+path = "contracts/product-tracker.clar"
+clarity_version = 2
+epoch = "2.1"
+
+[repl]
+costs = true
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
